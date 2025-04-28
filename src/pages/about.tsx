@@ -1,27 +1,50 @@
-import React from 'react';
+"use client"
+import Image from 'next/image';
+import React, { useState } from 'react';
+import {NavBar} from "@/component/NavBar";
+import "../app/globals.css";
+import { CursorTrailCanvas } from '@/component/CursorTrailCanvas';
+
+import { ProgressViewPortComponent } from '@/component/ProgressViewPortComponent';
+import { motion } from 'framer-motion';
+import { IoCloseSharp } from 'react-icons/io5';
+import EmailContactSection from '@/component/Contact';
+
+
 
 export default function About() {
+  
   return (
-    <div className="container mx-auto py-10 px-4">
-      <h1 className="text-3xl font-bold mb-6">About</h1>
-      
-      <div className="prose max-w-none">
-        <p>
-          Welcome to the About page. This is where you can share information 
-          about yourself, your company, or your project.
-        </p>
-        
-        <h2 className="text-xl font-semibold mt-6 mb-4">Our Mission</h2>
-        <p>
-          This section can include details about your mission, 
-          values, and what drives your work.
-        </p>
-        
-        <h2 className="text-xl font-semibold mt-6 mb-4">Our Team</h2>
-        <p>
-          Introduce key team members or collaborators here.
-        </p>
+    <div className="overflow-x-hidden ">
+    <NavBar/>
+    <CursorTrailCanvas
+      color="hsla(183, 64%, 27%, 0.4)"
+        className="pointer-events-none fixed inset-0 -z-10 h-full w-full"
+    />
+    <div className=' h-screen w-screen flex justify-center items-center  '>
+      <div className='w-[calc(100dvw-300px)]  h-full text-center grid grid-cols-2 justify-center items-center'>
+        <div>
+          <Image src="/images/Bulb.jpg" width={500} height={500} alt="Profile Image" />
+        </div>
+         <div className='text-9xl  bg-gradient-to-b from-teal-300 to-teal-500 bg-clip-text text-transparent'>
+          Hi<br/>
+           I am <br/>
+          <p className='uppercase mt-3'>Rajan</p>
+         </div>
       </div>
     </div>
+
+       <div className='w-screen overflow-x-hidden '>
+
+    <ProgressViewPortComponent/>
+ 
+   <EmailContactSection/>
+
+        </div>
+        </div>
   );
 }
+
+
+
+
