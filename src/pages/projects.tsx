@@ -72,20 +72,20 @@ export default function page () {
        <div className='flex  items-center justify-center'>
          <div className=' w-[calc(100vw-300px)]   mt-6 flex items-center justify-center '>
               <div>
-                  <div className='grid grid-cols-2 gap-8'>
+                  <div className='2xl:grid 2xl:grid-cols-2 md:gap-8 mt-2'>
                 {
                   [...projects].map((x,i)=>{
-                    return <div key={i} className='w-148 h-120 border-2 border-amber-300 rounded-2xl overflow-hidden '>
-                      <Image width={400} height={400} src={x.image} alt='Image'  className="object-cover w-full h-[80%]"/>
-                      <div className='text-xl m-1 ml-2'>
+                    return <div key={i} className='md:w-156 lg:w-200 md:h-128 h-84 w-80 border-2 border-amber-300 rounded-2xl overflow-hidden mt-2 md:mt-4'>
+                      <Image width={400} height={400} src={x.image} alt='Image'  className="object-cover w-full h-[75%] "/>
+                      <div className='md:text-xl m-1 ml-2 text-xs'>
                         {x.name}
                         </div>
-                        <div className='ml-2'>
+                        <div className='ml-2 md:text-xl text-xs'>
                         {x.description}
                         </div>
  
                         <div className=' flex justify-end pr-4'>
-                         <a href={x.link} className='underline'>Source Code</a>
+                         <a href={x.link} className='underline text-xs'>Source Code</a>
                           </div>
                     </div>
                   })

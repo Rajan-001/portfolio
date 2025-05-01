@@ -13,19 +13,22 @@ export  function  ProgressViewPortComponent() {
       const scaleY = useTransform(scrollYProgress, [0, 0.5, 1], [0, 3, 2]);
 
    return (
-    <div className="min-h-[calc(100vh-300px)] flex items-start justify-center bg-transparent">
-      <div ref={containerRef} className="relative h-[100vh] w-full flex justify-center border-2 border-amber-400">
+    <div className="min-h-[calc(100vh-300px)] flex xl:items-start items-center justify-center bg-transparent">
+      <div ref={containerRef} className="relative h-[100vh] w-full flex justify-center ">
          <motion.div
             style={{
                 scaleY,
                 originY: 0,
                 backgroundColor: "green"
             }}
-            className={`w-2 h-[130px] absolute top-[70px] left-[22%] `}
+            whileInView={{
+                opacity:1
+            }}
+            className={`w-1.5 h-[130px] absolute xl:top-[70px] left-[8%]  top-52 md:left-[22%]  sm:w-2 `}
             />
 
       {/* Timeline Items */}
-      <div className="flex flex-col items-center mt-8 " >
+      <div className="flex flex-col items-center xl:mt-8 justify-center " >
         {
             [...education].map((x,i)=>{
                 

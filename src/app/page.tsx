@@ -19,8 +19,9 @@ export default function Home() {
       />
       <MainPage/>
       <Skills/>
+      <div className="mt-12 ">
       <Projects/>
-      
+      </div>
    </div>
   );
 }

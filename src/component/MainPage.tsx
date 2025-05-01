@@ -16,10 +16,10 @@ export  function MainPage () {
                 Rajan
               </h1>
              </div>
-             <div className='absolute top-96'>
+             <div className='absolute lg:top-96 mt-24 sm:mt-0 md:mt-36'>
               <h2 className='text-xl font-semibold text-teal-200 dark:text-zinc-100 md:text-3xl'>
                 Full Stack Engineer
-              </h2>
+              </h2>  
               </div>
 
         </div>

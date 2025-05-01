@@ -44,9 +44,9 @@ export const works = [
 
 export const Projects = () => {
   return (
-    <div className='w-[100vw]  h-[calc(100dvh+250px)] overflow-x-hidden relative'>
+    <div className='w-[100vw]  2xl:h-[calc(100dvh+250px)] h-[calc(100dvh+650px)] md:h-[calc(100dvh)-200px] lg:h-[calc(100dvh)] overflow-hidden relative mt-48 sm:mt-0'>
     <div className='relative '> 
-        <div className='text-teal-400 text-3xl mx-6 absolute  left-12'>My Projects</div>
+        <div className='text-teal-400 md:text-3xl mx-6 absolute  left-12 text-2xl'>My Projects</div>
     </div>
     <div className=' w-[calc(100dvw-200px)]  mx-18 mt-24'>
      {
@@ -55,7 +55,7 @@ export const Projects = () => {
                <div key={i} className='group mt-12 relative ' >
                 <div className='w-auto z-12 '>
                     <div className=''>
-                    <div className='text-5xl uppercase w-auto text-teal-400 overflow-hidden inline-block group-hover:scale-110  group-hover:font-bold transition-all duration-200'>{name.project_name}
+                    <div className='xl:text-5xl text-2xl uppercase w-auto text-teal-400 overflow-hidden inline-block group-hover:scale-110  group-hover:font-bold transition-all duration-200'>{name.project_name}
                     <div className='h-2 ml-1 w-0 group-hover:w-full  bg-black duration-600 origin-left transition-all'></div>
                 </div> 
                 </div>
@@ -63,8 +63,8 @@ export const Projects = () => {
              
                 </div>
             
-                   <div className='text-2xl z-12 text-teal-300 transition-all  group-hover:text-teal-500 '>{name.project_description}</div>
-                   <div  className='absolute -z-10 -right-100 -top-56 overflow-hidden opacity-0  group-hover:opacity-100 group-hover:right-24 group-hover:-top-8 transition-all duration-400'>
+                   <div className='xl:text-2xl text-xl z-12 text-teal-300 transition-all  group-hover:text-teal-500 '>{name.project_description}</div>
+                   <div  className='absolute -z-10 2xl:-right-100 2xl:-top-56 right-24 overflow-hidden opacity-0  group-hover:opacity-100 group-hover:right-24 group-hover:-top-8 transition-all duration-400'>
                    <Image src={"/images/Bulb.jpg"} width={400} height={400} alt="sfsdflsd" className=''/>
                    </div>
                 </div>

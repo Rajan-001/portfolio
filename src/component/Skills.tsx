@@ -64,8 +64,8 @@ export  default function Skills(){
     const { scrollY } = useScroll();
 
     return(<div className="w-screen h-screen">
- <h1 className="text-5xl ml-16 text-teal-300">Skills</h1>
-  <div className=" w-[calc(100vw-152px)] mt-12">
+ <h1 className="text-5xl ml-16 text-teal-300 sm:text-xs md:text-4xl">Skills</h1>
+  <div className=" w-[calc(100vw-152px)] mt-12 sm:mt-4 ">
    {
     [...skills].map((skill,i)=>{
        const scrollTrigger=300+i*50;
@@ -82,12 +82,12 @@ export  default function Skills(){
        )
         
 return (
-        <motion.div style={{x,opacity}} key={i} className="inline-block border-1 backdrop-blur-3xl w-auto px-5 py-2.5 mx-12 my-4 rounded-2xl border-0.8 border-teal-400">
+        <motion.div style={{x,opacity}} key={i} className="inline-block border-1 backdrop-blur-3xl sm:w-20 px-5 py-2.5 mx-6 my-2 h-12  md:w-auto md:px-5 md:py-2.5 md:mx-12 md:my-4 lg:py-2 lg:w-auto 2xl:px-4 2xl:py-4 lg:mx-12 lg:my-4 rounded-2xl border-0.8 border-teal-400 ">
          <div className="flex items-center">
          <div>
          <Image src={`${skill.path}`} alt="react-icons " width={25} height={25}/>
          </div>
-         <div className="text-4xl ml-2 text-black">
+         <div className="lg:text-3xl ml-2 text-black sm:text-2xl text-xs lg:mb-2 md:mb-2 md:text-2xl">
             {skill.name}
          </div>
          </div>
