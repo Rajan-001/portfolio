@@ -1,8 +1,8 @@
 "use client"
 import Image from 'next/image';
-import React, { useState } from 'react';
+import React from 'react';
 import {NavBar} from "@/component/NavBar";
-import "../app/globals.css";
+import "../../app/globals.css";
 import { CursorTrailCanvas } from '@/component/CursorTrailCanvas';
 
 import { ProgressViewPortComponent } from '@/component/ProgressViewPortComponent';

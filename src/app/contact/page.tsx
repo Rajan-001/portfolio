@@ -1,6 +1,7 @@
+
 import { NavBar } from '@/component/NavBar'
 import React from 'react'
-import "../app/globals.css";
+import "../../app/globals.css";
 import { CursorTrailCanvas } from '@/component/CursorTrailCanvas';
 import EmailContactSection from '@/component/Contact';
 
@@ -23,7 +24,7 @@ export default function page () {
             </div>
            <div className="flex justify-center items-center  w-screen ">
          
-            <form className="w-112 mx-auto p-4 bg-gray-50 shadow-md rounded ">
+            <form className="w-112 mx-auto p-10 backdrop-blur-sm shadow-md rounded ">
               <h1 className='text-2xl'>Fill in the Form</h1>
               <div className='grid grid-cols-2 mt-4 gap-2'>
               <div className="mb-4">
@@ -65,7 +66,7 @@ export default function page () {
               </div>
               <button
                 type="submit"
-                className="w-full mt-4 bg-indigo-600 text-white py-2 px-4 rounded hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2"
+                className="w-full mt-4 bg-teal-600 cursor-pointer text-white py-2 px-4 rounded hover:bg-teal-800 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2"
               >
                 Send Message
               </button>

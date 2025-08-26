@@ -1,13 +1,9 @@
 "use client"
+import { routes } from '@/app/data/NavigationRoutes'
 import { useRouter } from 'next/navigation'
 import React from 'react'
 
-export const routes = [
-    { title: "Home", href: "/" },
-    { title: "About", href: "/about" },
-    { title: "Projects", href: "/projects" },
-    { title: "Contact", href: "/contact" },
-  ];
+
   
 
 export function NavBar (){
