@@ -5,8 +5,8 @@
   "scripts": {
     "dev": "next dev --turbopack",
     "build": "next build --no-lint",
-    "start": "next start"
-    // "lint": "next lint"
+    "start": "next start",
+    "lint": "next lint"
   },
   "dependencies": {
     "framer-motion": "^12.8.0",
