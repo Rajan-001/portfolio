@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-unused-expressions */
 "use client"
 import { RefObject } from "react";
 
@@ -8,6 +9,8 @@ export type CursorTrail = {
 
 export function cursorTrail(props: CursorTrail) {
   const { ref, color = "rgba(0, 0, 0, 0.5)" } = props;
+
+  // eslint-disable-next-line @typescript-eslint/no-non-null-asserted-optional-chain
   const ctx = ref.current?.getContext("2d")!;
   const AnimationFeature = {
     friction: 0.5,
@@ -97,7 +100,10 @@ export function cursorTrail(props: CursorTrail) {
         i = 0.5 * (e.y + t.y);
         ctx.quadraticCurveTo(e.x, e.y, n, i);
       }
+    
+      // eslint-disable-next-line prefer-const
       e = this.nodes[this.nodes.length - 2];
+      // eslint-disable-next-line prefer-const
       t = this.nodes[this.nodes.length - 1];
       ctx.quadraticCurveTo(e.x, e.y, t.x, t.y);
       ctx.stroke();
