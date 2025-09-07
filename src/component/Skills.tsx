@@ -82,16 +82,33 @@ export  default function Skills(){
        )
         
 return (
-        <motion.div style={{x,opacity}} key={i} className="inline-block border-1 backdrop-blur-3xl sm:w-20 px-5 py-2.5 mx-6 my-2 h-12  md:w-auto md:px-5 md:py-2.5 md:mx-12 md:my-4 lg:py-2 lg:w-auto 2xl:px-4 2xl:py-4 lg:mx-12 lg:my-4 rounded-2xl border-0.8 border-teal-400 ">
-         <div className="flex items-center">
-         <div>
-         <Image src={`${skill.path}`} alt="react-icons " width={25} height={25}/>
-         </div>
-         <div className="lg:text-3xl ml-2 text-black sm:text-2xl text-xs lg:mb-2 md:mb-2 md:text-2xl">
-            {skill.name}
-         </div>
-         </div>
-        </motion.div>)
+     <motion.div
+  style={{ x, opacity }}
+  key={i}
+  className="inline-block rounded-2xl border border-teal-400/70 bg-white/30 backdrop-blur-xl shadow-lg hover:shadow-teal-200/50 
+             px-5 py-3 mx-6 my-3 sm:w-24 md:w-auto md:px-6 md:py-3 md:mx-12 md:my-4 lg:px-8 lg:py-4 
+             transition-transform duration-300 hover:scale-105"
+>
+  <div className="flex items-center">
+    {/* Icon */}
+    <Image
+      src={skill.path}
+      alt={`${skill.name} icon`}
+      width={28}
+      height={28}
+      className="sm:w-7 sm:h-7 lg:w-9 lg:h-9"
+    />
+
+    {/* Label */}
+    <span className="ml-3 text-xs sm:text-sm md:text-lg lg:text-2xl font-semibold text-gray-900 dark:text-gray-100">
+      {skill.name}
+    </span>
+  </div>
+</motion.div>
+
+        
+    
+    )
     })
    }
    </div>
