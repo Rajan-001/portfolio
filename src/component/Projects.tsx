@@ -2,49 +2,13 @@
 import { motion } from 'framer-motion';
 import React from 'react'
 import Image from 'next/image';
+import { works } from '@/app/data/work';
 
-export const works = [
-    {
-        id: 1,
-        project_name: "excelidraw",
-        project_description: "A collaborative whiteboard tool inspired by Excalidraw, allowing users to create and share drawings in real-time.",
-        images: "/images/Bulb.jpg"
-    },
-    {
-        id: 2,
-        project_name: "taskify",
-        project_description: "A task management app designed to help users organize and prioritize their daily activities efficiently.",
-        images: "/images/Bulb.jpg"
-    },
-    {
-        id: 3,
-        project_name: "devconnect",
-        project_description: "A social platform for developers to connect, share knowledge, and collaborate on projects.",
-        images: "/images/Bulb.jpg"
-    },
-    {
-        id: 4,
-        project_name: "weatherly",
-        project_description: "A weather forecasting app providing real-time updates and detailed forecasts for locations worldwide.",
-        images: "/images/Bulb.jpg"
-    },
-    {
-        id: 5,
-        project_name: "meditrack",
-        project_description: "A healthcare app that helps users track their medications, appointments, and health records in one place.",
-        images: "/images/Bulb.jpg"
-    },
-    {
-        id: 6,
-        project_name: "shopwise",
-        project_description: "An e-commerce platform that provides personalized shopping recommendations and seamless checkout experiences.",
-        images: "/images/Bulb.jpg"
-    }
-];
+
 
 export const Projects = () => {
   return (
-    <div className='w-[100vw]  2xl:h-[calc(100dvh+250px)] h-[calc(100dvh+650px)] md:h-[calc(100dvh)-200px] lg:h-[calc(100dvh)] overflow-hidden relative mt-48 sm:mt-0'>
+    <div className='w-[100vw]   overflow-hidden relative mt-48 sm:mt-0'>
     <div className='relative '> 
         <div className='text-teal-400 md:text-3xl mx-6 absolute  left-12 text-2xl'>My Projects</div>
     </div>
@@ -52,22 +16,34 @@ export const Projects = () => {
      {
         [...works].map((name,i)=>{
             return(
-               <div key={i} className='group mt-12 relative ' >
-                <div className='w-auto z-12 '>
-                    <div className=''>
-                    <div className='xl:text-5xl text-2xl uppercase w-auto text-teal-400 overflow-hidden inline-block group-hover:scale-110  group-hover:font-bold transition-all duration-200'>{name.project_name}
-                    <div className='h-2 ml-1 w-0 group-hover:w-full  bg-black duration-600 origin-left transition-all'></div>
-                </div> 
-                </div>
-                {/* <motion.div className='  h-[2px] bg-black  mt-6' variants={{  initial: { x: 0, width: 0 },hover: { x: 0, width: "100%"  },exit:{ x: 0, width: 0 }}} ></motion.div> */}
-             
-                </div>
-            
-                   <div className='xl:text-2xl text-xl z-12 text-teal-300 transition-all  group-hover:text-teal-500 '>{name.project_description}</div>
-                   <div  className='absolute -z-10 2xl:-right-100 2xl:-top-56 right-24 overflow-hidden opacity-0  group-hover:opacity-100 group-hover:right-24 group-hover:-top-8 transition-all duration-400'>
-                   <Image src={"/images/Bulb.jpg"} width={400} height={400} alt="sfsdflsd" className=''/>
-                   </div>
-                </div>
+              <div key={i} className="group mt-20 relative cursor-pointer">
+  {/* Project Name */}
+  <div className="w-auto relative z-10">
+    <h3 className="xl:text-6xl text-3xl font-extrabold uppercase bg-gradient-to-r from-teal-400 via-cyan-400 to-blue-500 bg-clip-text text-transparent tracking-wide transition-all duration-500 group-hover:scale-110 group-hover:drop-shadow-[0_0_25px_rgba(45,212,191,0.7)]">
+      {name.project_name}
+      {/* Underline animation */}
+      <span className="block h-[3px] bg-gradient-to-r from-teal-400 via-cyan-400 to-blue-500 w-0 group-hover:w-full transition-all duration-700 mt-2 origin-left"></span>
+    </h3>
+  </div>
+
+  {/* Project Description */}
+  <p className="mt-6 xl:text-2xl text-lg leading-relaxed text-zinc-400 max-w-2xl transition-all duration-500 group-hover:text-zinc-100">
+    {name.project_description}
+  </p>
+
+  {/* Hover Image */}
+  <div className="absolute -z-10 opacity-0 group-hover:opacity-100 group-hover:-top-10 group-hover:right-20 transition-all duration-700 ease-out right-32 -top-24">
+    <Image
+      src={name.images}
+      width={420}
+      height={420}
+      alt={name.project_name}
+      className="rounded-2xl shadow-2xl group-hover:scale-105 transition-transform duration-700"
+    />
+  </div>
+</div>
+
+
                 
             )
         })

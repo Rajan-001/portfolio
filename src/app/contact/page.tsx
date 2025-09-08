@@ -24,7 +24,7 @@ export default function page () {
             </div>
            <div className="flex justify-center items-center  w-screen ">
          
-            <form className="w-112 mx-auto p-10 backdrop-blur-sm shadow-md rounded ">
+            <form className="w-112 mx-auto p-10 backdrop-blur-sm shadow-md rounded-4xl ">
               <h1 className='text-2xl'>Fill in the Form</h1>
               <div className='grid grid-cols-2 mt-4 gap-2'>
               <div className="mb-4">

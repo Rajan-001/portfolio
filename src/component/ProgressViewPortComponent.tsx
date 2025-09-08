@@ -3,41 +3,56 @@ import { motion, useScroll, useTransform } from "framer-motion";
 import { Item } from "./ProgressItem";
 import { useRef } from "react";
 
-export  function  ProgressViewPortComponent() {
-    const containerRef = useRef(null);
-    const { scrollYProgress } = useScroll({
-        target: containerRef,
-        offset: ["start end", "end start"]
-      });
-    
-      const scaleY = useTransform(scrollYProgress, [0, 0.5, 1], [0, 3, 2]);
+export function ProgressViewPortComponent() {
+  const containerRef = useRef(null);
+  const { scrollYProgress } = useScroll({
+    target: containerRef,
+    offset: ["start end", "end start"],
+  });
 
-   return (
-    <div className="min-h-[calc(100vh-300px)] flex xl:items-start items-center justify-center bg-transparent">
-      <div ref={containerRef} className="relative h-[100vh] w-full flex justify-center ">
-         <motion.div
-            style={{
-                scaleY,
-                originY: 0,
-                backgroundColor: "green"
-            }}
-            whileInView={{
-                opacity:1
-            }}
-            className={`w-1.5 h-[130px] absolute xl:top-[70px] left-[8%]  top-52 md:left-[22%]  sm:w-2 `}
+  // Scale the vertical line
+  const scaleY = useTransform(scrollYProgress, [0, 1], [0, 1]);
+
+  return (
+    <div className="min-h-screen flex bg-transparent">
+      <div
+        ref={containerRef}
+        className="relative w-full flex justify-center"
+        style={{ minHeight: `${education.length * 34}vh` }} // Dynamic height
+      >
+        {/* Progress Line */}
+        <motion.div
+          style={{ scaleY }}
+          className="
+            absolute top-0 h-full
+            w-1 sm:w-1.5 md:w-2 bg-teal-500 
+            origin-top rounded-full z-0
+            left-[13%] 
+            sm:left-[7.5%]
+            md:left-[10.5%] md:translate-x-0
+            xl:left-[8.5%]
+            2xl:left-[6.8%]
+          "
+        />
+
+        {/* Timeline Items */}
+        <div
+          className="
+            relative flex flex-col gap-16 
+            md:gap-24 xl:gap-32 
+            w-full items-center md:items-start
+          "
+        >
+          {education.map((x, i) => (
+            <Item
+              key={i}
+              level={x.level}
+              school={x.school}
+              location={x.location}
             />
-
-      {/* Timeline Items */}
-      <div className="flex flex-col items-center xl:mt-8 justify-center " >
-        {
-            [...education].map((x,i)=>{
-                
-                return (<Item key={i} level={x.level} school={x.school} location={x.location}/>)
-            })
-        }
-           
-            </div>
-            </div>
+          ))}
         </div>
-    )
+      </div>
+    </div>
+  );
 }

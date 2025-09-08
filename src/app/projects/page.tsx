@@ -14,38 +14,65 @@ export default function page () {
             color="hsla(183, 64%, 27%, 0.4)"
               className="pointer-events-none fixed inset-0 -z- h-full w-full"
           />
-         <div className='w-screen items-center '>
-          <div className='mt-24 ml-12'>
-         <div className='text-3xl text-teal-300 font-bold'>Projects</div>
-                  <div className='text-2xl text-teal-300'> Here are some of the projects I'd like to share</div>
-           </div>
-       <div className='flex  items-center justify-center'>
-         <div className=' w-[calc(100vw-300px)]   mt-6 flex items-center justify-center '>
-              <div>
-                  <div className='2xl:grid 2xl:grid-cols-2 md:gap-8 mt-2'>
-                {
-                  [...projects].map((x,i)=>{
-                    return <div key={i} className='md:w-156 lg:w-200 md:h-128 h-84 w-80 border-2 border-amber-300 rounded-2xl overflow-hidden mt-2 md:mt-4'>
-                      <Image width={400} height={400} src={x.image} alt='Image'  className="object-cover w-full h-[75%] "/>
-                      <div className='md:text-xl m-1 ml-2 text-xs'>
-                        {x.name}
-                        </div>
-                        <div className='ml-2 md:text-xl text-xs'>
-                        {x.description}
-                        </div>
- 
-                        <div className=' flex justify-end pr-4'>
-                         <a href={x.link} className='underline text-xs'>Source Code</a>
-                          </div>
-                    </div>
-                  })
-                }
-            </div>
-            </div>
+       <div className="w-screen flex flex-col items-center px-4 sm:px-8 lg:px-20">
+  {/* Heading */}
+          <div className="mt-24 text-center">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-cyan-200 via-cyan-400 to-cyan-200">
+              Projects
+            </h2>
+            <p className="text-lg sm:text-xl md:text-2xl text-slate-500 mt-2">
+              Here are some of the projects I&apos;d like to share
+            </p>
+          </div>
 
-            </div> 
-            </div>
-         </div> 
+            {/* Projects Grid */}
+            
+        <div className="w-full mt-8 flex justify-center">
+          <div className="grid gap-6 sm:gap-8 md:gap-10 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3 w-full max-w-[1440px]">
+            {projects.map((project, i) => (
+              <div
+                key={i}
+                className="border-2 border-cyan-500 rounded-2xl overflow-hidden flex flex-col hover:shadow-2xl transition-shadow duration-300"
+              >
+                {/* Project Image */}
+                <Image
+                  width={400}
+                  height={400}
+                  src={project.image}
+                  alt={project.name}
+                  className="object-cover w-full h-48 sm:h-56 md:h-64"
+                />
+
+            {/* Project Info */}
+            <div className="p-4 flex flex-col flex-1">
+              <h3 className="text-lg sm:text-xl md:text-2xl font-semibold bg-clip-text text-transparent   bg-gradient-to-r from-cyan-400 via-cyan-500 to-cyan-400">
+                {project.name}
+              </h3>
+              <p className="mt-2 text-sm sm:text-base md:text-lg text-slate-500 flex-1">
+                {project.description}
+              </p>
+
+              {/* Source Code Link */}
+              {project.link && (
+                <div className="mt-4 flex justify-end">
+                  <a
+                    href={project.link}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="underline text-sm sm:text-base text-blue-400 hover:text-orange-400"
+                  >
+                    Source Code
+                  </a>
+                </div>
+            )}
+          </div>
+        </div>
+      ))}
+    </div>
+  </div>
+       </div>
+
+
          </div>
  
   )
