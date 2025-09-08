@@ -27,4 +27,15 @@ export const works = [
       "A collaborative whiteboard that enables real-time multi-user drawing and editing using Socket.IO. Features include JWT authentication, role-based access, Prisma ORM persistence, and a canvas-based editor supporting shapes, resizing, movement, and text input.",
     images: "/images/ikoot.jpg",
   },
+  {
+    id: 5,
+    project_name: "Delassuss",
+    project_description: "The Delassus Group website presents a vibrant digital world for a leading Moroccan grower. It beautifully showcases their core products: snacking tomatoes, citrus, grapes, avocados, and flowers—all produced across 3,000 hectares and exported globally.",
+    images: "/images/ikoot.jpg",
+  }, {
+    id: 6,
+    project_name: "Giulia Gartner",
+    project_description:  "Giulia Gartner portfolio website—a dark-mode, minimalistic experience showcasing her work as an outdoor, travel, and commercial photographer and filmmaker from the Dolomites in northern Italy",
+    images: "/images/ikoot.jpg",
+  },
 ];
