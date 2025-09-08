@@ -19,7 +19,7 @@ export default function page () {
            <div className='text-center mt-24'>
             <p className='text-3xl py-8 font-bold'>Contact me</p>
             <p className='text-2xl pb-4'>
-            I'd love to talk about any new opportunities or projects
+            I&apos;d love to talk about any new opportunities or projects
             </p>
             </div>
            <div className="flex justify-center items-center  w-screen ">
