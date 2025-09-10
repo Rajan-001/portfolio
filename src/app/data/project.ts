@@ -2,7 +2,7 @@ export const projects = [
   {
     id: 1,
     name: "Comment.Io",
-    image: "/images/commentio.jpg",
+    image: "/images/comment.png",
     link: "https://comment-io.vercel.app/",
     description:
       "A YouTube Comment Analyzer that classifies comments into positive, negative, and suggestion categories. Built with Next.js, Express.js, Node.js, Prisma ORM, and PostgreSQL. Features include Redis-based rate limiting, Razorpay payment integration, and scalable secure architecture.",
@@ -10,7 +10,7 @@ export const projects = [
   {
     id: 2,
     name: "Myora Hotel Booking",
-    image: "/images/myora.jpg",
+    image: "/images/myora-hotel.png",
     link: "https://moyra-hotel.vercel.app/",
     description:
       "A hotel booking platform with secure authentication and a conflict-free booking system. Built using Next.js, Node.js, Express.js, and Framer Motion. Features include JWT-based login, prevention of double bookings, and smooth interactive UI.",

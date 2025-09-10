@@ -4,14 +4,14 @@ export const works = [
     project_name: "Comment.Io",
     project_description:
       "A YouTube Comment Analyzer that classifies comments into positive, negative, and suggestion categories. Built with Next.js, Express.js, Node.js, Prisma ORM, and PostgreSQL. Features include Redis-based rate limiting, Razorpay payment integration, and scalable secure architecture.",
-    images: "/images/commentio.jpg",
+    images: "/images/comment.png",
   },
   {
     id: 2,
     project_name: "Myora Hotel Booking",
     project_description:
       "A hotel booking platform with secure authentication and a conflict-free booking system. Built using Next.js, Node.js, Express.js, and Framer Motion. Features include JWT-based login, prevention of double bookings, and smooth interactive UI.",
-    images: "/images/myora.jpg",
+    images: "/images/myora-hotel.png",
   },
   {
     id: 3,
