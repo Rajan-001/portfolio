@@ -25,7 +25,7 @@ export const projects = [
   },
   {
     id: 4,
-    name: "Ikoot",
+    name: "Ikoo",
     image: "/images/ikoo.png",
     link: "https://ikoo9.netlify.app/",
     description:
@@ -40,7 +40,7 @@ export const projects = [
       "The Delassus Group website presents a vibrant digital world for a leading Moroccan grower. It beautifully showcases their core products: snacking tomatoes, citrus, grapes, avocados, and flowers—all produced across 3,000 hectares and exported globally.",
   },
     {
-    id: 5,
+    id: 6,
     name: "Giulia Gartner",
     image: "/images/giulia.png",
     link: "https://forner.pages.dev/",

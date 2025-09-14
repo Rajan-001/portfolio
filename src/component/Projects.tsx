@@ -12,11 +12,13 @@ export const Projects = () => {
     <div className='relative '> 
         <div className='text-teal-400 md:text-3xl mx-6 absolute  left-12 text-2xl'>My Projects</div>
     </div>
+
     <div className=' w-[calc(100dvw-200px)]  mx-18 mt-24'>
      {
         [...works].map((name,i)=>{
             return(
-              <div key={i} className="group mt-20 relative cursor-pointer">
+            <a key={i} href={name.link}>
+              <div key={i}  className="group mt-20 relative cursor-pointer">
   {/* Project Name */}
   <div className="w-auto relative z-10">
     <h3 className="xl:text-6xl text-3xl font-extrabold uppercase bg-gradient-to-r from-teal-400 via-cyan-400 to-blue-500 bg-clip-text text-transparent tracking-wide transition-all duration-500 group-hover:scale-110 group-hover:drop-shadow-[0_0_25px_rgba(45,212,191,0.7)]">
@@ -41,8 +43,8 @@ export const Projects = () => {
       className="rounded-2xl shadow-2xl group-hover:scale-105 transition-transform duration-700"
     />
   </div>
-</div>
-
+              </div>
+             </a>
 
                 
             )
