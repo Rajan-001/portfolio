@@ -1,8 +1,9 @@
-import { motion, useScroll } from "framer-motion"
+"use client"
 import { useRef } from "react"
+import { motion, useScroll } from "framer-motion"
 
 export function Item({level,school,location}:{level:string,school:string,location:string}) {
-    const ref = useRef(null)
+    const ref = useRef<HTMLDivElement | null>(null)
     const { scrollYProgress } = useScroll({
         target: ref,
         offset: ["start end", "end end"],
@@ -10,7 +11,7 @@ export function Item({level,school,location}:{level:string,school:string,locatio
 
    
     return (
-       <section className="relative flex items-center w-full h-[150px] px-6 md:px-12 lg:px-20">
+       <section ref={ref} className="relative flex items-center w-full h-[150px] px-6 md:px-12 lg:px-20">
   {/* Circle on the left */}
   <figure className="flex-shrink-0 z-10">
     <svg

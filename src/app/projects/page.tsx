@@ -32,7 +32,7 @@ export default function page () {
             {projects.map((project, i) => (
               <div
                 key={i}
-                className="border-2 border-cyan-500 rounded-2xl overflow-hidden flex flex-col hover:shadow-2xl transition-shadow duration-300"
+                className="border-2 border-cyan-500 rounded-2xl overflow-hidden flex flex-col hover:shadow-2xl transition-shadow duration-300 z-20"
               >
                 {/* Project Image */}
                 <Image
@@ -40,7 +40,7 @@ export default function page () {
                   height={400}
                   src={project.image}
                   alt={project.name}
-                  className="object-cover w-full h-48 sm:h-56 md:h-64"
+                  className="object-fill w-full h-48 sm:h-56 md:h-64"
                 />
 
             {/* Project Info */}
@@ -52,7 +52,7 @@ export default function page () {
                 {project.description}
               </p>
 
-              {/* Source Code Link */}
+           
               {project.link && (
                 <div className="mt-4 flex justify-end">
                   <a
@@ -61,7 +61,7 @@ export default function page () {
                     rel="noopener noreferrer"
                     className="underline text-sm sm:text-base text-blue-400 hover:text-orange-400"
                   >
-                    Source Code
+                    Live Link
                   </a>
                 </div>
             )}

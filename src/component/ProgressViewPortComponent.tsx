@@ -1,10 +1,11 @@
+"use client"
 import { education } from "@/app/data/Education";
 import { motion, useScroll, useTransform } from "framer-motion";
 import { Item } from "./ProgressItem";
 import { useRef } from "react";
 
 export function ProgressViewPortComponent() {
-  const containerRef = useRef(null);
+  const containerRef = useRef<HTMLDivElement | null>(null);
   const { scrollYProgress } = useScroll({
     target: containerRef,
     offset: ["start end", "end start"],
