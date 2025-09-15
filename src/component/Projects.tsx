@@ -29,7 +29,7 @@ export const Projects = () => {
   </div>
 
   {/* Project Description */}
-  <p className="mt-6 xl:text-2xl text-lg leading-relaxed text-zinc-400 max-w-2xl transition-all duration-500 group-hover:text-zinc-100">
+  <p className="mt-6 xl:text-2xl text-lg leading-relaxed text-neutral-600 max-w-2xl transition-all duration-500 group-hover:text-neutral-300">
     {name.project_description}
   </p>
 

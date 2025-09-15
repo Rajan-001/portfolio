@@ -29,9 +29,9 @@ export default function About() {
         <div className="relative group">
           <div className="absolute -inset-4 bg-gradient-to-r from-teal-400 to-cyan-500 rounded-full blur-3xl opacity-30 group-hover:opacity-50 transition duration-700"></div>
           <Image
-            src="/images/Bulb.jpg"
-            width={500}
-            height={500}
+            src="/images/profile.jpg"
+            width={300}
+            height={300}
             alt="Profile Image"
             className="rounded-3xl shadow-2xl relative z-10 group-hover:scale-105 transition-transform duration-700"
           />
@@ -45,7 +45,7 @@ export default function About() {
           <h1 className="uppercase bg-gradient-to-b from-teal-300 via-cyan-400 to-teal-600 bg-clip-text text-transparent font-extrabold text-5xl sm:text-6xl md:text-7xl 2xl:text-9xl drop-shadow-lg tracking-tight">
             Rajan
           </h1>
-          <p className="mt-6 text-lg sm:text-xl md:text-2xl text-zinc-300 max-w-xl">
+          <p className="mt-6 text-lg sm:text-xl md:text-2xl text-neutral-600 max-w-xl">
             A <span className="text-teal-500 font-semibold">Full Stack Engineer</span> who loves building 
             scalable web apps, creating smooth user experiences, and making ideas come alive 🚀
           </p>

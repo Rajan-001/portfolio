@@ -20,7 +20,7 @@ export default function page () {
             <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-cyan-200 via-cyan-400 to-cyan-200">
               Projects
             </h2>
-            <p className="text-lg sm:text-xl md:text-2xl text-slate-500 mt-2">
+            <p className="text-lg sm:text-xl md:text-2xl text-neutral-600 mt-2">
               Here are some of the projects I&apos;d like to share
             </p>
           </div>
@@ -48,7 +48,7 @@ export default function page () {
               <h3 className="text-lg sm:text-xl md:text-2xl font-semibold bg-clip-text text-transparent   bg-gradient-to-r from-cyan-400 via-cyan-500 to-cyan-400">
                 {project.name}
               </h3>
-              <p className="mt-2 text-sm sm:text-base md:text-lg text-slate-500 flex-1">
+              <p className="mt-2 text-sm sm:text-base md:text-lg text-neutral-600 flex-1">
                 {project.description}
               </p>
 
