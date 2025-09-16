@@ -9,6 +9,7 @@ import { ProgressViewPortComponent } from '@/component/ProgressViewPortComponent
 import { motion } from 'framer-motion';
 import { IoCloseSharp } from 'react-icons/io5';
 import EmailContactSection from '@/component/Contact';
+import { Email } from '@/component/Email';
 
 
 
@@ -58,7 +59,7 @@ export default function About() {
 
     <ProgressViewPortComponent/>
 
-   <EmailContactSection/>
+   <Email/>
 
         </div>
         </div>

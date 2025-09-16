@@ -7,7 +7,7 @@ export default function EmailContactSection(){
 const [formWindow,setFormWindow]=useState(false)
     return(
     <>
-       <div className='flex justify-center items-center md:h-120 h-72 mt-16'>
+       <div className='cursor-pointer flex justify-center items-center md:h-120 h-72 mt-16'>
     <div className='bg-gradient-to-bl from-teal-300  to-teal-600 h-72 sm:h-90 md:w-240 w-120 rounded-4xl flex flex-col text-white justify-center items-center gap-8 '>
     <div>
       <button className='text-gray-500 md:px-6 px-6 py-1 border-2 rounded-2xl text-xl  bg-white uppercase bold cursor-pointer' onClick={()=>{navigator.clipboard.writeText("rajanpalial123@gmail.com");      
@@ -34,7 +34,7 @@ const [formWindow,setFormWindow]=useState(false)
       <input type="email" placeholder="Email" className="w-full  my-2 px-4 py-2 border rounded-md bg-white" />
       <input type="text" placeholder="Subject" className="w-full  my-2 px-4 py-2 border rounded-md bg-white" />
       <textarea placeholder="Message" className="w-full px-4 py-2  my-2 border rounded-md resize-none bg-white" rows={4}></textarea>
-      <button className="w-full px-4 py-3 bg-white  my-2 rounded-2xl  transition-all">Submit</button>
+      <a  href="mailto:rajan1801282@gmail.com" className="w-full cursor-pointer px-4 py-3 bg-white  my-2 rounded-2xl  transition-all">Submit</a>
 
         </div>
     </motion.div>
