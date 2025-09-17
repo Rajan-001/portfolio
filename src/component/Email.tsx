@@ -22,7 +22,7 @@ export const Email = () => {
    
 
       <a
-      href="/Rajan-Palial-Resume.pdf"  // place PDF in your "public" folder
+      href="/Rajan-Resume.pdf"  // place PDF in your "public" folder
       target="_blank"
       rel="noopener noreferrer"
       className="w-full flex justify-center cursor-pointer"
