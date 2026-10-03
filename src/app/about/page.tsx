@@ -29,13 +29,14 @@ export default function About() {
         {/* Left: Profile Image */}
         <div className="relative group">
           <div className="absolute -inset-4 bg-gradient-to-r from-teal-400 to-cyan-500 rounded-full blur-3xl opacity-30 group-hover:opacity-50 transition duration-700"></div>
-          <Image
-            src="/images/profile.jpg"
-            width={300}
-            height={300}
-            alt="Profile Image"
-            className="rounded-3xl shadow-2xl relative z-10 group-hover:scale-105 transition-transform duration-700"
-          />
+         <Image
+          src="/images/profile.jpg"
+          width={300}
+          height={300}
+          alt="Profile Image"
+          loading="eager"
+          className="relative z-10 h-auto rounded-3xl shadow-2xl transition-transform duration-700 group-hover:scale-105"
+        />
         </div>
 
         {/* Right: Text */}

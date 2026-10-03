@@ -35,13 +35,16 @@ export default function page () {
                 className="border-2 border-cyan-500 rounded-2xl overflow-hidden flex flex-col hover:shadow-2xl transition-shadow duration-300 z-20"
               >
                 {/* Project Image */}
-                <Image
-                  width={400}
-                  height={400}
-                  src={project.image}
-                  alt={project.name}
-                  className="object-fill w-full h-48 sm:h-56 md:h-64"
-                />
+    
+                <div className="relative w-full h-48 sm:h-56 md:h-64">
+                  <Image
+                    src={project.image}
+                    alt={project.name}
+                    fill
+                    sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                    className="object-fill"
+                  />
+                </div>
 
             {/* Project Info */}
             <div className="p-4 flex flex-col flex-1">
