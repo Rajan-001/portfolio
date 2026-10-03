@@ -1,4 +1,5 @@
-"use client"
+"use client";
+
 import { CSSProperties, useEffect, useRef } from "react";
 import { cursorTrail } from "@/utility/cursorTrail";
 
@@ -13,10 +14,11 @@ export function CursorTrailCanvas(props: CursorTrailCanvasProps) {
 
   useEffect(() => {
     const { cleanUp, renderTrailCursor } = cursorTrail({
-     // @ts-expect-error
+      // @ts-expect-error cursorTrail expects a ref type that differs from React's canvas ref type
       ref: refCanvas,
       color: props.color,
     });
+
     renderTrailCursor();
 
     return () => {
@@ -29,6 +31,6 @@ export function CursorTrailCanvas(props: CursorTrailCanvasProps) {
       ref={refCanvas}
       className={props.className}
       style={props.style}
-    ></canvas>
+    />
   );
 }
