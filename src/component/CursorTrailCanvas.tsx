@@ -13,7 +13,7 @@ export function CursorTrailCanvas(props: CursorTrailCanvasProps) {
 
   useEffect(() => {
     const { cleanUp, renderTrailCursor } = cursorTrail({
-      //@ts-ignore
+     // @ts-expect-error
       ref: refCanvas,
       color: props.color,
     });
