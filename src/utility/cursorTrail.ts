@@ -3,7 +3,7 @@
 import { RefObject } from "react";
 
 export type CursorTrail = {
-  ref: RefObject<HTMLCanvasElement>;
+  ref: RefObject<HTMLCanvasElement | null>;
   color?: string;
 };
 

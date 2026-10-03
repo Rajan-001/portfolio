@@ -14,7 +14,6 @@ export function CursorTrailCanvas(props: CursorTrailCanvasProps) {
 
   useEffect(() => {
     const { cleanUp, renderTrailCursor } = cursorTrail({
-      // @ts-expect-error cursorTrail expects a ref type that differs from React's canvas ref type
       ref: refCanvas,
       color: props.color,
     });
